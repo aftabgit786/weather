@@ -8,5 +8,5 @@ for file_value in file_values:
     min_temp = float(file_value[3])
     diffrent_max_with_min = (max_temp - min_temp) /2
 
-    print(f"{date}, Maximum-Temp is {max_temp} AND Minimum-Temp is {min_temp} Diffrance, {diffrent_max_with_min}")
+    print(f"{date}, Maximum-Temp is {max_temp} AND Minimum-Temp is {min_temp} of Averige is: {diffrent_max_with_min}")
 
