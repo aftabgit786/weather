@@ -1,4 +1,5 @@
 from weather.utils.reader import read_file
+
 file_values = read_file()
 
 for file_value in file_values:
@@ -7,4 +8,5 @@ for file_value in file_values:
     min_temp = float(file_value[3])
     diffrent_max_with_min = max_temp - min_temp
 
-    print(date, "Maximum-Temp AND Minimum-Temp Diffrance", diffrent_max_with_min)
+    print(f"{date}, Maximum-Temp is {max_temp} AND Minimum-Temp is {min_temp} Diffrance, {diffrent_max_with_min}")
+
