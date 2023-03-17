@@ -1,7 +1,0 @@
-my name is afta
-this is second line
-this is third line
-this is another line
-
-
-this is vim file
