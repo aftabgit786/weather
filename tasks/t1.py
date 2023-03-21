@@ -1,6 +1,6 @@
-from weather.utils.reader import read_file
+from weather.utils.reader import read_files
 
-file_values = read_file()
+file_values = read_files("/home/aftab/Desktop/Data/ISDP/weather/files/f1.csv")
 
 for file_value in file_values:
     date = file_value[0]
