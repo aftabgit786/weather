@@ -1,9 +1,14 @@
 def read_and_get_file_contents(file_path):
-    file_values = []  # Initialize empty list
-    with open(file_path) as file_reader:
-        file_content = file_reader.read()  # get content in file
-        for row in file_content.split("\n")[1:-1]:
-            file_values.append(row.split(","))
-        file_reader.close()  # close file
+    """ take 1 argument from file and get content """
+    file_contents = []
 
-    return file_values
+    with open(file_path) as file_reader:
+        file_content = file_reader.read()
+
+        for line in file_content.split("\n")[1:-1]:
+            column = line.split(",")
+            file_contents.append(column)
+
+        file_reader.close()
+
+    return file_contents
