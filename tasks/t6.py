@@ -1,5 +1,5 @@
 from weather.utils.reader import get_file_contents
-from weather.utils.constent import MappingIndexF2
+from weather.utils.constant import MappingIndexF2
 from datetime import datetime
 
 file_path = "/home/aftab/Desktop/Data/ISDP/weather/files/f2.csv"
