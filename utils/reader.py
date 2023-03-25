@@ -1,4 +1,4 @@
-def read_and_get_file_contents(file_path):
+def get_file_contents(file_path):
     """ take 1 argument from file and get content """
     file_contents = []
 
