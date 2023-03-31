@@ -1,12 +1,14 @@
-from weather.utils.reader import read_files
+from weather.utils.reader import get_file_contents
+from weather.utils.constant import MappingIndexF1
 
-file_values = read_files("/home/aftab/Desktop/Data/ISDP/weather/files/f1.csv")
+file_path = "/home/aftab/Desktop/Data/ISDP/weather/files/f1.csv"
+file_contents = get_file_contents(file_path)
 
-for file_value in file_values:
-    date = file_value[0]
-    max_temp = float(file_value[1])
-    min_temp = float(file_value[3])
-    diffrent_max_with_min = max_temp - min_temp
+for file_content in file_contents:
+    date = file_content[MappingIndexF1.DATE]
+    max_temperature = float(file_content[MappingIndexF1.MAXIMUM_TEMPERATURE])
+    min_temperature = float(file_content[MappingIndexF1.MINIMUM_TEMPERATURE])
 
-    print(f"{date}, Maximum-Temp is {max_temp} AND Minimum-Temp is {min_temp} Diffrance, {diffrent_max_with_min}")
+    difference = max_temperature - min_temperature
 
+    print(f"{date}, Maximum-Temp is {max_temperature} AND Minimum-Temp is {min_temperature} Differance, {difference}")

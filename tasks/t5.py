@@ -1,9 +1,13 @@
-from weather.utils.reader import read_files
+from weather.utils.reader import get_file_contents
+from weather.utils.constant import MappingIndexF2
 
-file_values = read_files("/home/aftab/Desktop/Data/ISDP/weather/files/f2.csv")
+file_path = "/home/aftab/Desktop/Data/ISDP/weather/files/f2.csv"
+file_contents = get_file_contents(file_path)
 
-for file_value in file_values:
-    date = file_value[1]
-    events = file_value[-2]
+for file_content in file_contents:
+    date = file_content[MappingIndexF2.DATE]
+    events = file_content[MappingIndexF2.EVENTS]
+
     if events in ["Rain",  "Snow",  "Rain-Snow"]:
+
         print(f"{events} of the date {date}")
